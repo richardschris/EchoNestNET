@@ -14,7 +14,7 @@ namespace EchoNestNET
         public string name { get; set; }
         [JsonProperty(PropertyName = "description")]
         public string description { get; set; }
-        [JsonProperty(PropertyName = "similarity")]
+        [JsonProperty(PropertyName = "similarity")] 
         public float similarity { get; set; }
 
         [JsonObject]
