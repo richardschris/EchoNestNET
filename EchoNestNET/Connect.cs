@@ -490,5 +490,21 @@ namespace EchoNestNET
             string json = echo.DownloadString(urlSuffix);
             return json;
         }
+
+        //public string TrackProfile()
+        //{
+        //    string json;
+
+        //    return json;
+        //}
+
+        //public string TrackUpload()
+        //{
+
+        //    echo.UploadFile()
+
+        //    string json;
+        //    return json;
+        //}
     }
 }

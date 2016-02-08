@@ -22,8 +22,6 @@ namespace EchoNestNET
         [JsonProperty(PropertyName = "title")]
         public string songName { get; set; }
 
-        [JsonProperty(PropertyName = "audio_summary")]
-        public string audioSummary { get; set; }
         [JsonProperty(PropertyName = "artist_discovery")]
         public float artistDiscovery { get; set; }
         [JsonProperty(PropertyName = "artist_discovery_rank")]
@@ -54,6 +52,35 @@ namespace EchoNestNET
         public Song()
         {
 
+        }
+
+        [JsonObject]
+        public class audioSummary
+        {
+            [JsonProperty(PropertyName = "analysis_url")]
+            public string analysisUrl { get; set; }
+            [JsonProperty(PropertyName = "danceability")]
+            public float danceability { get; set; }
+            [JsonProperty(PropertyName = "duration")]
+            public float duration { get; set; }
+            [JsonProperty(PropertyName = "energy")]
+            public float energy { get; set; }
+            [JsonProperty(PropertyName = "key")]
+            public int key { get; set; }
+            [JsonProperty(PropertyName = "loudness")]
+            public float loudness { get; set; }
+            [JsonProperty(PropertyName = "mode")]
+            public int mode { get; set; }
+            [JsonProperty(PropertyName = "speechiness")]
+            public float speechiness { get; set; }
+            [JsonProperty(PropertyName = "acousticness")]
+            public float acousticness { get; set; }
+            [JsonProperty(PropertyName = "liveness")]
+            public float liveness { get; set; }
+            [JsonProperty(PropertyName = "tempo")]
+            public float tempo { get; set; }
+            [JsonProperty(PropertyName = "time_signature")]
+            public int timeSignature { get; set; }
         }
     }
 }
