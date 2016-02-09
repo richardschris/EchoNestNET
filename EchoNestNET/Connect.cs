@@ -410,6 +410,7 @@ namespace EchoNestNET
         {
             if (search != parameters.songSearchParameters.artist) { parameters.songSearchParameters.artist = null; }
             string urlSuffix = "song/search?api_key=" + APIKey + query.ArtistOrArtistId(search) + parameters.SongSearchString() + parameters.SongBucketString();
+            Console.WriteLine(urlSuffix);
             string json = echo.DownloadString(urlSuffix);
             return json;
         }
@@ -491,12 +492,13 @@ namespace EchoNestNET
             return json;
         }
 
-        //public string TrackProfile()
-        //{
-        //    string json;
-
-        //    return json;
-        //}
+        public string TrackProfile(string id, bool audioSummary = false)
+        {
+            string urlSuffix = "track/profile?api_key" + APIKey + query.TrackIdOrMd5(id);
+            if (audioSummary == true) { urlSuffix += "&bucket=audio_summary"; }
+            string json = echo.DownloadString(urlSuffix);
+            return json;
+        }
 
         //public string TrackUpload()
         //{

@@ -314,6 +314,9 @@ namespace EchoNestNET
             public bool songHotttnesssRank { get; set; } = false;
             public bool songType { get; set; } = false;
             public bool tracks { get; set; } = false;
+
+            //TODO
+            public bool idRosettaCatalog { get; set; } = false;
         }
 
         public string SongBucketString()
@@ -334,7 +337,10 @@ namespace EchoNestNET
             if (songBucketParameters.songHotttnesss != false) { songBucket.Append("&bucket=song_hotttnesss"); }
             if (songBucketParameters.songHotttnesssRank != false) { songBucket.Append("&bucket=song_hotttnesss_rank"); }
             if (songBucketParameters.songType != false) { songBucket.Append("&bucket=song_type"); }
-            if (songBucketParameters.tracks != false) { songBucket.Append("&bucket=tracks"); }
+            if (songBucketParameters.tracks != false && songBucketParameters.idRosettaCatalog != false) { songBucket.Append("&bucket=tracks"); }
+
+            //TODO
+            if (songBucketParameters.idRosettaCatalog != false) { songBucket.Append("&bucket=id:7digital-US"); }
 
             return songBucket.ToString();
         }

@@ -40,5 +40,12 @@ namespace EchoNestNET
             if (id.StartsWith("TR")) { return "&track_id=" + id; }
             else { throw new ArgumentException("Method requires an ID"); }
         }
+
+        public string TrackIdOrMd5(string id)
+        {
+            if (id.StartsWith("TR")) { return "&id=" + id; }
+            if (id.Length == 32) { return "&md5=" + id; }
+            else { throw new ArgumentException("Method requires an ID or MD5"); }
+        }
     }
 }

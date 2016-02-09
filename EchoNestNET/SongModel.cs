@@ -47,7 +47,7 @@ namespace EchoNestNET
         [JsonProperty(PropertyName = "song_type")]
         public string songType { get; set; }
         [JsonProperty(PropertyName = "tracks")]
-        public string tracks { get; set; }
+        public List<string> tracks { get; set; }
 
         public Song()
         {
