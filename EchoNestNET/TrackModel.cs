@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace EchoNestNET
 {
     [JsonObject]
-    public class TrackModel
+    public class Track
     {
         // TODO: reorder into alphabetical order
         [JsonProperty(PropertyName = "status")]

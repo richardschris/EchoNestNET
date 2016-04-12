@@ -190,10 +190,15 @@ namespace EchoNestNET
         {
             IList<Song> songList = new List<Song>();
             JObject o = JObject.Parse(json);
+            //for (int i = 0; i < o["response"]["songs"].Count(); i++) 
+            //{
+            //    if (o["response"]["songs"][i]["tracks"].ToString() == "[]") { o["response"]["songs"][i]["tracks"] = ""; }
+            //}
             IList<JToken> results = o["response"]["songs"].Children().ToList();
 
             foreach (var i in results)
             {
+                Console.WriteLine(i);
                 Song song = JsonConvert.DeserializeObject<Song>(i.ToString());
                 songList.Add(song);
             }
