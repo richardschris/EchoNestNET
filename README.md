@@ -3,7 +3,7 @@ Echo Nest library for .NET
 
 ## SPOTIFY HAS DISCONTINUED ECHONEST SO I'M DISCONTINUING WORK ON THIS
 
-To use it for the limited time Echo Nest exists, you can use a pretty ad hoc interface.
+To use it for the limited time Echo Nest exists, you can use a pretty ad hoc interface (the original plan was to pretty it up a bit, but...)
 
 ```
 using EchoNestNET;
